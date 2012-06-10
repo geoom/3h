@@ -11,4 +11,6 @@
   <classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-api/2.1.0-b03/jsf-api-2.1.0-b03.jar" sourcepath="M2_REPO/com/sun/faces/jsf-api/2.1.0-b03/jsf-api-2.1.0-b03-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/sun/faces/jsf-impl/2.1.0-b03/jsf-impl-2.1.0-b03.jar" sourcepath="M2_REPO/com/sun/faces/jsf-impl/2.1.0-b03/jsf-impl-2.1.0-b03-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/sun/el/el-ri/1.0/el-ri-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.9/junit-4.9.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"/>
 </classpath>
