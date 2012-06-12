@@ -1,5 +1,5 @@
 
-package org.fisi.tresh;
+package org.fisi.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
