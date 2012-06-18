@@ -64,6 +64,23 @@
 		</dependency>
 	</dependencies>
 
+	<contributors>
+		<contributor>
+			<name>George</name>
+			<email>gmejia.fisi@gmail.com</email>
+			<url>https://www.facebook.com/GeoFiIsI</url>
+			<organization>Ninguna</organization>
+			<organizationUrl>http://ninguna.com</organizationUrl>
+			<roles>
+				<role>Desarrollador</role>
+			</roles>
+			<timezone>-5</timezone>
+			<properties>
+				<gtalk>gmejia.fisi@gmail.com</gtalk>
+			</properties>
+		</contributor>
+	</contributors>
+
 	<build>
 		<finalName>3hweb</finalName>
 		<plugins>
