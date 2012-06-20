@@ -4,14 +4,13 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-import org.apache.log4j.Logger;
 import org.tresh.model.core.Usuario;
 
 @ManagedBean(name ="ctusuario")
 @SessionScoped
 public class UsuarioBean extends ObjectBean{
 
-	static final Logger log = Logger.getLogger(UsuarioBean.class);
+//	static final Logger log = Logger.getLogger(UsuarioBean.class);
 	private Usuario usuarioLogeado;
 
 	@PostConstruct
@@ -28,8 +27,10 @@ public class UsuarioBean extends ObjectBean{
 	}
 	
 	public void loginAction(){
-		log.debug("nombre: "+ usuarioLogeado.getNombre());
-		log.debug("clave: "+ usuarioLogeado.getClave());		
+//		log.debug("nombre: "+ usuarioLogeado.getNombre());
+//		log.debug("clave: "+ usuarioLogeado.getClave());	
+		System.out.println("nombre: "+ usuarioLogeado.getNombre());
+		System.out.println("clave: "+ usuarioLogeado.getClave());
 	}
 	
 }

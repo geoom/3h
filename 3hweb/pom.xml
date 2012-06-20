@@ -10,6 +10,10 @@
 	<name>3hweb Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
 	<repositories>
 		<repository>
 			<id>java.net.m2</id>
@@ -209,5 +213,11 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
 	</build>
 </project>
