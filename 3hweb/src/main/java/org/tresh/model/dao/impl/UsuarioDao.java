@@ -1,9 +1,9 @@
 package org.tresh.model.dao.impl;
 
 import org.tresh.model.core.Usuario;
-import org.tresh.model.dao.UsuarioDao;
+import org.tresh.model.dao.IUsuarioDao;
 
-public class UsuarioDaoImpl implements UsuarioDao {
+public class UsuarioDao implements IUsuarioDao {
 
 	@Override
 	public Usuario getUsuario(String nombreUsuario) {

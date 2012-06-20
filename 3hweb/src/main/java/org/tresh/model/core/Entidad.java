@@ -5,10 +5,10 @@ import java.util.List;
 /**
  * 
  * @author GEORGE MEJIA
- *
+ * 
  */
 public class Entidad {
-	
+   
 	private String descripcion;
 	private String email;
 	private String web;

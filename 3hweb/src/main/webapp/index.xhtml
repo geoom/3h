@@ -11,6 +11,15 @@
  
     <h:body>
     	<h1>Main page of 3hweb</h1>
+    	<h:form>
+    	<h:panelGrid columns="2">
+    	<h:outputText value="Nombre de usuario"/>
+    	<h:inputText value="#{ctusuario.usuarioLogeado.nombre}"/>
+    	<h:outputText value="Clave"/>
+    	<h:inputText value="#{ctusuario.usuarioLogeado.clave}"/>
+    	<h:commandButton value="Login" action="#{ctusuario.loginAction}"/>
+    	</h:panelGrid>
+    	</h:form>
     </h:body>
  
 </html>

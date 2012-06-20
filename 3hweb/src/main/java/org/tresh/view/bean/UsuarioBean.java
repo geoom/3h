@@ -1,22 +1,35 @@
 package org.tresh.view.bean;
 
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import org.apache.log4j.Logger;
+import org.tresh.model.core.Usuario;
+
+@ManagedBean(name ="ctusuario")
+@SessionScoped
 public class UsuarioBean extends ObjectBean{
 
-	private String nombre;
-	private String clave;
-	
-	public String getNombre() {
-		return nombre;
+	static final Logger log = Logger.getLogger(UsuarioBean.class);
+	private Usuario usuarioLogeado;
+
+	@PostConstruct
+	public void init(){
+		usuarioLogeado = new Usuario();
 	}
 	
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public Usuario getUsuarioLogeado() {
+		return usuarioLogeado;
 	}
-	public String getClave() {
-		return clave;
+
+	public void setUsuarioLogeado(Usuario usuarioLogeado) {
+		this.usuarioLogeado = usuarioLogeado;
 	}
-	public void setClave(String clave) {
-		this.clave = clave;
+	
+	public void loginAction(){
+		log.debug("nombre: "+ usuarioLogeado.getNombre());
+		log.debug("clave: "+ usuarioLogeado.getClave());		
 	}
 	
 }

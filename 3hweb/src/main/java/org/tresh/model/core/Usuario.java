@@ -1,7 +1,15 @@
 package org.tresh.model.core;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Usuario {
 
+	@Id
+	@GeneratedValue
+	private Integer id;
 	private String nombre;
 	private String clave;
 	
@@ -12,6 +20,7 @@ public class Usuario {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 	public String getClave() {
 		return clave;
 	}
