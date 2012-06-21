@@ -11,8 +11,8 @@ import org.tresh.model.service.IUsuarioService;
 @Service
 public class UsuarioService implements IUsuarioService {
 
-	@Resource
-	private IGenericDao dao;
+//	@Resource
+//	private IGenericDao dao;
 
 	public Usuario nuevoUsuario(){
 		return new Usuario();
@@ -26,7 +26,18 @@ public class UsuarioService implements IUsuarioService {
 
 	@Override
 	public void guardar(Usuario usuario) {
-		dao.persist(usuario);
+//		dao.persist(usuario);
+	}
+
+	@Override
+	public String validar(Usuario usuario) {
+		String nombreEsperado = "admin";
+		String claveEsperada = "123";
+		if(usuario.getNombre().equals(nombreEsperado) && usuario.getClave().equals(claveEsperada)){
+			return "Login exitoso !!";
+		}else{
+			return "Login fallido !!";
+		}
 	}
 
 }

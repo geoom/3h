@@ -4,6 +4,16 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>3hweb</display-name>
+	 <listener>
+    	<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+  	</listener>
+  	<listener>
+    	<listener-class>
+			org.springframework.web.context.request.RequestContextListener
+		</listener-class>
+  	</listener>
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>

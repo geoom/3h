@@ -1,17 +1,23 @@
 package org.tresh.view.bean;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.annotation.Resource;
 
+import org.apache.log4j.Logger;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 import org.tresh.model.core.Usuario;
+import org.tresh.model.service.IUsuarioService;
 
-@ManagedBean(name ="ctusuario")
-@SessionScoped
+@Controller  
+@Scope("session") 
 public class UsuarioBean extends ObjectBean{
 
-//	static final Logger log = Logger.getLogger(UsuarioBean.class);
+	static final Logger log = Logger.getLogger(UsuarioBean.class);
 	private Usuario usuarioLogeado;
+	
+	@Resource
+	private IUsuarioService usuarioService;
 
 	@PostConstruct
 	public void init(){
@@ -26,11 +32,9 @@ public class UsuarioBean extends ObjectBean{
 		this.usuarioLogeado = usuarioLogeado;
 	}
 	
-	public void loginAction(){
-//		log.debug("nombre: "+ usuarioLogeado.getNombre());
-//		log.debug("clave: "+ usuarioLogeado.getClave());	
-		System.out.println("nombre: "+ usuarioLogeado.getNombre());
-		System.out.println("clave: "+ usuarioLogeado.getClave());
+	public void loginAction(){		
+		String mensaje = usuarioService.validar(usuarioLogeado);
+		log.debug(mensaje);
 	}
 	
 }

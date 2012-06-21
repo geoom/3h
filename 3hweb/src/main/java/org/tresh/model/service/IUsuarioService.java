@@ -7,5 +7,6 @@ public interface IUsuarioService {
 	
 	Usuario validar(String username, String password) throws TreshExcepcion;
 	void guardar(Usuario usuario);
+	String validar(Usuario usuario);
 	
 }

@@ -3,10 +3,9 @@ package org.tresh.model.dao.impl;
 import java.io.Serializable;
 import java.util.List;
 
-import net.sf.hibernate.SessionFactory;
-
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate.support.HibernateDaoSupport;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.tresh.model.dao.IGenericDao;
