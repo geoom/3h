@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd  
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
-	<!-- <context:annotation-config /> -->
+	<context:annotation-config />
 
 	<!-- Database Configuration -->
 	<import resource="classes/spring/database/DataSource.xml" />
@@ -19,6 +19,6 @@
 	<!-- Beans Declaration -->
 	<import resource="classes/spring/config/BeanLocations.xml" />
 
-	<!-- <tx:annotation-driven transaction-manager="transacctionManager" /> -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 </beans>

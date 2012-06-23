@@ -2,21 +2,21 @@ package org.tresh.view.bean;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
 import org.tresh.model.core.Usuario;
 import org.tresh.model.service.IUsuarioService;
 
-@Controller  
-@Scope("session") 
+@ManagedBean(name="ctusuario")
+@SessionScoped
 public class UsuarioBean extends ObjectBean{
 
 	static final Logger log = Logger.getLogger(UsuarioBean.class);
 	private Usuario usuarioLogeado;
 	
-	@Resource
+	@Resource(name="usuarioServiceWeb")
 	private IUsuarioService usuarioService;
 
 	@PostConstruct
@@ -35,6 +35,6 @@ public class UsuarioBean extends ObjectBean{
 	public void loginAction(){		
 		String mensaje = usuarioService.validar(usuarioLogeado);
 		log.debug(mensaje);
+//		log.debug(usuarioLogeado.getNombre());
 	}
-	
 }

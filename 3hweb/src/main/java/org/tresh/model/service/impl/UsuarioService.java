@@ -1,15 +1,12 @@
 package org.tresh.model.service.impl;
 
-import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.tresh.model.core.Usuario;
-import org.tresh.model.dao.IGenericDao;
 import org.tresh.model.exception.TreshExcepcion;
 import org.tresh.model.service.IUsuarioService;
 
-@Service
+@Service("usuarioServiceWeb")
 public class UsuarioService implements IUsuarioService {
 
 //	@Resource
@@ -30,7 +27,6 @@ public class UsuarioService implements IUsuarioService {
 //		dao.persist(usuario);
 	}
 
-	@Transactional
 	public String validar(Usuario usuario) {
 		String nombreEsperado = "admin";
 		String claveEsperada = "123";
