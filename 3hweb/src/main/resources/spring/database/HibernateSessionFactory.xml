@@ -7,7 +7,7 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />  
         <property name="configurationClass" value="org.hibernate.cfg.AnnotationConfiguration"/>
-		<property name="configLocation">  
+		<property name="configLocation">                                     
             <value>WEB-INF/classes/hibernate/config/hibernate.cfg.xml</value>
         </property>
 	</bean>
