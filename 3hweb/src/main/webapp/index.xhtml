@@ -14,10 +14,11 @@
     	<h:form>
     	<h:panelGrid columns="2">
     	<h:outputText value="Nombre de usuario"/>
-    	<h:inputText value="#{ctusuario.usuarioLogeado.nombre}"/>
+    	<h:inputText value="#{usuarioBean.usuarioLogeado.nombre}"/>
     	<h:outputText value="Clave"/>
-    	<h:inputText value="#{ctusuario.usuarioLogeado.clave}"/>
-    	<h:commandButton value="Login" action="#{ctusuario.loginAction}"/>
+    	<h:inputText value="#{usuarioBean.usuarioLogeado.clave}"/>
+    	<h:commandButton value="Leer nombre" action="#{usuarioBean.loginAction()}"/>
+    	<h:commandButton value="Guardar" action="#{usuarioBean.guardarUsuario()}"/>
     	</h:panelGrid>
     	</h:form>
     </h:body>

@@ -5,5 +5,6 @@ import org.tresh.model.core.Usuario;
 public interface IUsuarioDao {
 
 	Usuario getUsuario(String nombreUsuario);
+	void guardar(Usuario usuario);
 	
 }

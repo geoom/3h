@@ -1,16 +1,19 @@
 package org.tresh.model.service.impl;
 
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 import org.tresh.model.core.Usuario;
+import org.tresh.model.dao.IUsuarioDao;
 import org.tresh.model.exception.TreshExcepcion;
 import org.tresh.model.service.IUsuarioService;
 
-@Service("usuarioServiceWeb")
+@Service
 public class UsuarioService implements IUsuarioService {
 
-//	@Resource
-//	private IGenericDao dao;
+	@Resource
+	private IUsuarioDao dao;
 
 	public Usuario nuevoUsuario(){
 		return new Usuario();
@@ -24,7 +27,7 @@ public class UsuarioService implements IUsuarioService {
 
 	@Override
 	public void guardar(Usuario usuario) {
-//		dao.persist(usuario);
+		dao.guardar(usuario);
 	}
 
 	public String validar(Usuario usuario) {
