@@ -1,5 +1,7 @@
 package org.tresh.model.dao.impl;
 
+import java.util.Collection;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -17,14 +19,20 @@ public class UsuarioDao extends HibernateDaoSupport implements IUsuarioDao {
     }
 	
 	@Transactional(readOnly = true)  
-	public Usuario getUsuario(String nombreUsuario) {
-		// TODO Auto-generated method stub
-		return null;
+	public Collection getUsuario(String nombreUsuario) {
+		return   getHibernateTemplate().
+			       findByNamedQuery("buscarUsuarioPorNombre", nombreUsuario);
 	}
 
 	@Transactional
 	public void guardar(Usuario usuario) {
 		getHibernateTemplate().saveOrUpdate(usuario);  		
+	}
+
+	@Transactional(readOnly = true)  
+	public Collection getUsuario(Integer idUusuario) {
+		return   getHibernateTemplate().
+			       findByNamedQuery("buscarUsuarioPorId", idUusuario);
 	}
 
 }

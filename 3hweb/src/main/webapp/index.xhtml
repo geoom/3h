@@ -4,6 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"  
       >
     <h:head>
     	<h:outputStylesheet library="css" name="table-style.css"  />
@@ -14,9 +15,9 @@
     	<h:form>
     	<h:panelGrid columns="2">
     	<h:outputText value="Nombre de usuario"/>
-    	<h:inputText value="#{usuarioBean.usuarioLogeado.nombre}"/>
+    	<p:inputText value="#{usuarioBean.usuarioLogeado.nombre}"/>
     	<h:outputText value="Clave"/>
-    	<h:inputText value="#{usuarioBean.usuarioLogeado.clave}"/>
+    	<p:inputText value="#{usuarioBean.usuarioLogeado.clave}"/>
     	<h:commandButton value="Leer nombre" action="#{usuarioBean.loginAction()}"/>
     	<h:commandButton value="Guardar" action="#{usuarioBean.guardarUsuario()}"/>
     	</h:panelGrid>
