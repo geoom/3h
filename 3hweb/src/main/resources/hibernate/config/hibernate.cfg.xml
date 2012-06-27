@@ -5,8 +5,39 @@
 <hibernate-configuration>
 	<session-factory>
 	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="hibernate.hbm2ddl.auto">create</property>
-		<property name="hibernate.show_sql">true</property>
-		<mapping class="org.tresh.model.core.Usuario" />
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <mapping class="org.tresh.model.core.BandejaNotificacion"/>
+        <mapping class="org.tresh.model.core.Comentario"/>
+        <mapping class="org.tresh.model.core.Categoria"/>
+        <mapping class="org.tresh.model.core.Consumidor"/>
+        <mapping class="org.tresh.model.core.Contrato"/>
+        <mapping class="org.tresh.model.core.Departamentos"/>
+        <mapping class="org.tresh.model.core.Distritos"/>
+        <mapping class="org.tresh.model.core.Entidad"/>
+        <mapping class="org.tresh.model.core.Fotografia"/>
+        <mapping class="org.tresh.model.core.GrupoServicio"/>
+        <mapping class="org.tresh.model.core.Notificacion"/>
+        <mapping class="org.tresh.model.core.Organizacion"/>
+        <mapping class="org.tresh.model.core.Perfil"/>
+        <mapping class="org.tresh.model.core.Persona"/>
+        <mapping class="org.tresh.model.core.Proveedor"/>
+        <mapping class="org.tresh.model.core.Provincia"/>
+        <mapping class="org.tresh.model.core.Seguimiento"/>
+        <mapping class="org.tresh.model.core.Servicio"/>
+        <mapping class="org.tresh.model.core.Telefono"/>
+        <mapping class="org.tresh.model.core.Ubicacion"/>
+        <mapping class="org.tresh.model.core.Usuario"/>
+        <mapping class="org.tresh.model.domain.Atraccion"/>
+        <mapping class="org.tresh.model.domain.Consumidor3h"/>
+        <mapping class="org.tresh.model.domain.GrupoServicio3h"/>
+        <mapping class="org.tresh.model.domain.Proveedor3h"/>
+        <mapping class="org.tresh.model.domain.Referencia"/>
+        <mapping class="org.tresh.model.domain.Reserva3h"/>
+        <mapping class="org.tresh.model.support.DistritosId"/>
+        <mapping class="org.tresh.model.support.ProvinciaId"/>
+        <mapping class="org.tresh.model.support.SeguimientoId"/>
 	</session-factory>
 </hibernate-configuration>

@@ -4,6 +4,7 @@ package org.tresh.model.service.impl;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
+import org.tresh.model.core.Categoria;
 import org.tresh.model.core.Usuario;
 import org.tresh.model.dao.IUsuarioDao;
 import org.tresh.model.exception.TreshExcepcion;
@@ -20,24 +21,18 @@ public class UsuarioService implements IUsuarioService {
 	}
 	
 	@Override
-	public Usuario validar(String username, String password)
-			throws TreshExcepcion {
-		return null;
-	}
-
-	@Override
 	public void guardar(Usuario usuario) {
 		dao.guardar(usuario);
 	}
 
-	public String validar(Usuario usuario) {
-		String nombreEsperado = "admin";
-		String claveEsperada = "123";
-		if(usuario.getNombre().equals(nombreEsperado) && usuario.getClave().equals(claveEsperada)){
-			return "Login exitoso !!";
-		}else{
-			return "Login fallido !!";
-		}
+	@Override
+	public String validar(String nombre, String clave) {
+     Usuario u;
+     u=dao.validarUsuario(nombre, clave);
+     if(u==null)
+      return "-------------No existe";
+     else
+      return "-------------Existe";	 
 	}
 
 }

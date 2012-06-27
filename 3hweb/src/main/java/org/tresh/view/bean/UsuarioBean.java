@@ -41,7 +41,7 @@ public class UsuarioBean extends ObjectBean implements Serializable {
 	}
 
 	public void loginAction() {
-		String mensaje = usuarioService.validar(usuarioLogeado);
+		String mensaje = usuarioService.validar(usuarioLogeado.getNombre(),usuarioLogeado.getClave());
 		log.debug(mensaje);
 		// log.debug(usuarioLogeado.getNombre());
 	}
